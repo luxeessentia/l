@@ -1,1 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Luxe Essentials</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="carousel.css" />
+  <script>
+    // Hero slider script
+    document.addEventListener("DOMContentLoaded", () => {
+      const slides = document.querySelectorAll(".slide");
+      let currentIndex = 0;
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle("active", i === index);
+        });
+      }
+
+      showSlide(currentIndex);
+
+      setInterval(() => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+      }, 4000);
+    });
+  </script>
+</head>
+<body>
+  <div class="sidebar">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="login.html">Login/Register</a></li>
+        <li><a href="orders_returns.html">Orders & Returns</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="main-content">
+    <div class="hero">
+      <div class="slide active">
+        GET $5 OFF YOUR FIRST ORDER WHEN YOU SIGN UP!<br />
+        <button class="signup-btn">Sign Up</button>
+      </div>
+      <div class="slide">Handmade Bags &amp; Purses</div>
+      <div class="slide">Tech Accessories</div>
+      <div class="slide">Trendy Phone Cases</div>
+    </div>
+
+    <div class="featured-section">
+      <h2>Bags</h2>
+      <div class="carousel-container">
+        <div class="carousel-item">Bag 1</div>
+        <div class="carousel-item">Bag 2</div>
+        <div class="carousel-item">Bag 3</div>
+        <div class="carousel-item">Bag 4</div>
+      </div>
+    </div>
+
+    <div class="featured-section">
+      <h2>Tech Accessories</h2>
+      <div class="carousel-container">
+        <div class="carousel-item">Tech 1</div>
+        <div class="carousel-item">Tech 2</div>
+        <div class="carousel-item">Tech 3</div>
+        <div class="carousel-item">Tech 4</div>
+      </div>
+    </div>
+
+    <div class="featured-section">
+      <h2>Phone Cases</h2>
+      <div class="carousel-container">
+        <div class="carousel-item">Case 1</div>
+        <div class="carousel-item">Case 2</div>
+        <div class="carousel-item">Case 3</div>
+        <div class="carousel-item">Case 4</div>
+      </div>
+    </div>
+  </div>
+  <footer class="sticky-bar">
+    📦 FREE STANDARD SHIPPING ON U.S. ORDERS $50+ | FREE EXPRESS SHIPPING ON U.S. ORDERS $100+
+  </footer>
+</body>
+</html>
 <!-- Homepage HTML content here -->
